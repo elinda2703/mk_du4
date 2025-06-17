@@ -1,9 +1,9 @@
 from numpy import *
 from pyproj import *
 
-def project(proj_name, R_z, u, v):
+def project(proj_name, R_z, u, v, u0, v0):
     # Create new projection
-    my_proj =  Proj(proj=proj_name, R=R_z, lat_1=75)
+    my_proj =  Proj(proj=proj_name, R=R_z, lat_1=u0, lon_0=v0)
 
     # Project point calculation
     [X,Y] = my_proj(v, u)

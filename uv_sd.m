@@ -9,5 +9,5 @@ function [s, d] = uv_sd(u, v, uk, vk)
 
     %Cartographic longtitude
     %d in [-pi, pi], quadrant adjustment
-    d = -atan2(sin(vk-v).*cos(u), cos(u).*sin(uk).*cos(vk-v) - sin(u).*cos(uk));
+    d = atan2(sin(vk-v).*cos(u), cos(u).*sin(uk).*cos(vk-v) - sin(u).*cos(uk));
 end
